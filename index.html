@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap Protocol</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Tap Protocol!</h1>
+        <p>Start tapping to attack</p>
+        <p>Instructions: 1 tap = 1 gold</p>
+    </header>
+
+    <div>Stage: <b id="stage">1</b></div>
+    <div>Gold: <b id="gold">0</b></div>
+
+    <section>
+        <div id="hp">
+            <span id="monsterName"> Slime Lv. 1 </span> <br>
+            <span id="monsterHPText">HP: 10</span>
+        </div>
+    </section>
+
+    <div id="btnDiv">
+        <button id="btn"></button>
+    </div>
+    <h2>Shop</h2>
+    <div>
+        <button id="buyTap">Sharpen Blade (+1 tap) - <span id="costTap">15</span></button>
+        <!-- <button id="buyDps">Hire Minion</button> -->
+    </div>
+</body>
+</html>
