@@ -103,7 +103,7 @@ update.buyTap.addEventListener('click', buyTap);
 
 spawn();
 
-// Background music handling -------------------------------------------------
+// Background music here
 const bgMusic = document.getElementById('bgMusic');
 const musicToggle = document.getElementById('musicToggle');
 
@@ -113,20 +113,16 @@ function setMusicButtonState(playing) {
     musicToggle.style.display = 'inline-block';
 }
 
-// Try to autoplay; many browsers block autoplay without user gesture.
 if (bgMusic) {
     bgMusic.volume = 0.6;
     bgMusic.play().then(() => {
-        // playing succeeded
         setMusicButtonState(true);
     }).catch(() => {
-        // autoplay blocked - show toggle so user can start music
         if (musicToggle) {
             setMusicButtonState(false);
         }
     });
 
-    // toggle click handler
     if (musicToggle) {
         musicToggle.addEventListener('click', () => {
             if (bgMusic.paused) {
@@ -138,9 +134,6 @@ if (bgMusic) {
             }
         });
     }
-
-    // Some browsers allow resume on any user gesture; listen to first click anywhere
-    // to attempt resume if autoplay was blocked.
     const resumeOnUserGesture = () => {
         if (bgMusic.paused) {
             bgMusic.play().then(() => setMusicButtonState(true)).catch(() => {});
