@@ -27,13 +27,17 @@
         </div>
     </section>
 
-    <div id="btnDiv">
-        <button id="btn"></button>
+    <!-- background music (attempt autoplay, may be blocked by browser) -->
+    <audio id="bgMusic" src="Stay the Course.mp3" loop preload="auto"></audio>
+    <!-- shown only if autoplay is blocked so the user can start music -->
+    <button id="musicToggle" aria-label="Toggle background music" style="display:none">Play Music</button>
+
+    <div id="monsterDiv">
+        <button id="monster"></button>
     </div>
     <h2>Shop</h2>
     <div>
-        <button id="buyTap">Sharpen Blade (+1 tap) - <span id="costTap">15</span></button>
-        <!-- <button id="buyDps">Hire Minion</button> -->
+        <button id="buyTap" class="allBtns">Sharpen Blade (+1 tap) - <span id="costTap">15 gold</span></button>
     </div>
 </body>
 </html>
