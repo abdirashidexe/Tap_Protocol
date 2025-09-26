@@ -6,7 +6,7 @@ const monsterImages = [
   "images/blue.png",   // stage 2
   "images/green.png",  // stage 3
   "images/purple.png", // stage 4
-];
+];  
 
 const bossImage = "images/boss.png";
 

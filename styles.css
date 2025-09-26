@@ -22,10 +22,10 @@ h1, body {
 body {
     font-size: x-large;
     background-image: url("images/bg.png");
-    background-size: cover; /* cover the entire element */
-    background-repeat: no-repeat; /* no image repetition */
-    background-position: center center; /* centers the image */
-    background-attachment: fixed; /* fixed during scrolling */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-attachment: fixed; 
 }
 
 #monsterDiv {
