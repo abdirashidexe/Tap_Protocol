@@ -103,46 +103,6 @@ update.buyTap.addEventListener('click', buyTap);
 
 spawn();
 
-// Background music here
-const bgMusic = document.getElementById('bgMusic');
-const musicToggle = document.getElementById('musicToggle');
-
-function setMusicButtonState(playing) {
-    if (!musicToggle) return;
-    musicToggle.textContent = playing ? 'Pause Music' : 'Play Music';
-    musicToggle.style.display = 'inline-block';
-}
-
-if (bgMusic) {
-    bgMusic.volume = 0.6;
-    bgMusic.play().then(() => {
-        setMusicButtonState(true);
-    }).catch(() => {
-        if (musicToggle) {
-            setMusicButtonState(false);
-        }
-    });
-
-    if (musicToggle) {
-        musicToggle.addEventListener('click', () => {
-            if (bgMusic.paused) {
-                bgMusic.play();
-                setMusicButtonState(true);
-            } else {
-                bgMusic.pause();
-                setMusicButtonState(false);
-            }
-        });
-    }
-    const resumeOnUserGesture = () => {
-        if (bgMusic.paused) {
-            bgMusic.play().then(() => setMusicButtonState(true)).catch(() => {});
-        }
-        window.removeEventListener('click', resumeOnUserGesture);
-    };
-    window.addEventListener('click', resumeOnUserGesture);
-}
-
 
 
 
